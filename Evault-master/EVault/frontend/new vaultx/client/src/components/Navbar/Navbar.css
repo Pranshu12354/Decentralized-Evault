@@ -1,0 +1,142 @@
+.Container_Navbar{
+    border: 2px solid;
+    display: flex;
+    height: calc(5rem - 14px);
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    
+}
+
+.Burger_Logo_Navbar{
+    display: flex;
+    height: 3rem;
+    
+}
+
+.Burger{
+    display: flex;
+    flex-direction: column;
+    cursor:pointer;
+    justify-content:space-between;
+    margin:0.2rem ;
+    padding: 0.39rem;
+    border:1px solid ;
+    margin-top: 5px;
+    margin-left: 0.5rem;
+    margin-right: 0.7rem;
+    border-radius: 100%;
+}
+
+.Burger p{
+    margin:0.2rem;
+    min-width: 1.2rem;
+    min-height: 0.1rem;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.Logo_Div_Navbar{
+    display: flex;
+    text-decoration: none;
+    width: 3rem;
+    height: 3rem;
+}
+
+.Logo_Div_Navbar p {
+    margin-left: 2rem;
+    color: #fff; /* White color */
+    font-weight: bold;
+    font-family: Arial, sans-serif; /* Example font family */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds a shadow to the text */
+    animation: text-glow 2s infinite alternate; /* Text animation */
+    font-size: 3rem;
+}
+
+/* Define the text animation */
+@keyframes text-glow {
+    from {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    to {
+        text-shadow: 0px 0px 10px rgb(247, 247, 247);
+    }
+}
+
+
+.apps_box{
+    width: 25px;
+    margin: auto 0.7rem;
+    height: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.appbox{
+    border: 1px solid white;
+    margin: 0.1rem;
+    width: 2px;
+    height: 2px;
+}
+
+.auth_navbar {
+    margin-left: auto; /* Pushes the auth_navbar to the right */
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+
+.auth_btn{
+    cursor:pointer;
+    color: rgb(36, 70, 240);
+    background-color: black;
+    border:1px solid grey;
+    padding: 0.4rem;
+    margin: 2px;
+    border-radius: 2rem;
+}
+
+@keyframes revealText {
+    0% {
+      clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
+    }
+    50% {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    100% {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
+  
+  .reveal-text {
+    font-size: 1.5em;
+    color: #f2eeee;
+    animation: revealText 2s ease-in-out forwards;
+    margin-left: 12rem;
+    margin-top: 0.85rem;
+  }
+  .user_profile_button {
+    display: inline-block;
+   padding: 7px;
+    /* Change this to your desired button color */
+  margin-right: 30px;
+    text-decoration: none;
+    border: none;
+    border-radius: 25px; /* This will make the button round */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #87bbf1;
+}
+
+.user_profile_button:hover {
+    background-color: #0f4a8a; /* Change this to your desired button color on hover */
+}
+.logout_button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 40px;
+     /* Adjust spacing between profile and logout button */
+  }
+  
+  
+  

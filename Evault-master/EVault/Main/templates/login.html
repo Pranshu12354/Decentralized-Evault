@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap">
+  <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Quicksand", sans-serif;
+      }
+
+      body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          background: #111;
+          width: 100%;
+          overflow: hidden;
+      }
+
+      .ring {
+          position: relative;
+          width: 500px;
+          height: 500px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .ring i {
+          position: absolute;
+          inset: 0;
+          border: 2px solid #fff;
+          transition: 0.5s;
+      }
+
+      .ring i:nth-child(1) {
+          border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+          animation: animate 6s linear infinite;
+      }
+
+      .ring i:nth-child(2) {
+          border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+          animation: animate 4s linear infinite;
+      }
+
+      .ring i:nth-child(3) {
+          border-radius: 41% 44% 56% 59% / 38% 62% 63% 67%;
+          animation: animate2 10s linear infinite;
+      }
+
+      .ring i:nth-child(4) {
+          border-radius: 40% 44% 50% 69% / 40% 60% 65% 69%;
+          animation: animate 6s linear infinite;
+      }
+
+      .ring:hover i {
+          border: 6px solid var(--clr);
+          filter: drop-shadow(0 0 20px var(--clr));
+      }
+
+      @keyframes animate {
+          0% {
+              transform: rotate(0deg);
+          }
+
+          100% {
+              transform: rotate(360deg);
+          }
+      }
+
+      @keyframes animate2 {
+          0% {
+              transform: rotate(360deg);
+          }
+
+          100% {
+              transform: rotate(0deg);
+          }
+      }
+
+      @keyframes animate3 {
+          0% {
+              transform: rotate(360deg);
+          }
+
+          100% {
+              transform: rotate(360deg);
+          }
+      }
+
+      @keyframes animate4 {
+          0% {
+              transform: rotate(0deg);
+          }
+
+          100% {
+              transform: rotate(0deg);
+          }
+      }
+
+      .login {
+          position: absolute;
+          width: 300px;
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 20px;
+      }
+
+      .login h2 {
+          font-size: 2em;
+          color: #fff;
+      }
+
+      .login .inputBx {
+          position: relative;
+          width: 100%;
+      }
+
+      .login .inputBx input {
+          position: relative;
+          width: 100%;
+          padding: 12px 20px;
+          background: transparent;
+          border: 2px solid #fff;
+          border-radius: 40px;
+          font-size: 1.2em;
+          color: #fff;
+          box-shadow: none;
+          outline: none;
+      }
+
+      .login .inputBx input[type="submit"] {
+          width: 100%;
+          background: #0078ff;
+          background-color: linear-gradient(45deg, #ff357a, #fff172);
+          border: none;
+          cursor: pointer;
+      }
+
+      .login .inputBx input::placeholder {
+          color: rgba(255, 255, 255, 0.75);
+      }
+
+      .login .links {
+          position: relative;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 20px;
+      }
+
+      .login .links a {
+          color: #fff;
+          text-decoration: none;
+      }
+
+      .login select {
+        width: 100%;
+        padding: 12px 20px;
+        background: transparent;
+        border: 2px solid #fff;
+        border-radius: 40px;
+        font-size: 1.2em;
+        color: #fff;
+        box-shadow: none;
+        outline: none;
+        appearance: none; /* Remove default arrow */
+        /* Add custom arrow */
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23ffffff'%3E%3Cpath d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        cursor: pointer;
+    }
+    
+    .login select::-ms-expand {
+        display: none;
+    }
+    
+    .login select option {
+        background-color: #111; /* Background color */
+        color: #fff; /* Text color */
+    }
+    
+    
+    .login select:focus {
+        border-color: #0078ff; /* Change border color when focused */
+        box-shadow: 0 0 0 2px #0078ff; /* Add a shadow when focused */
+    }
+    
+    
+    .login select:hover {
+        border-color: #0078ff; /* Change border color when hovering */
+    }
+  </style>
+  
+</head>
+
+<body>
+  <div class="ring">
+    <i style="--clr:#00ff0a;"></i>
+    <i style="--clr:#ff0057;"></i>
+    <i style="--clr:#fffd44;"></i>
+  <form class="login" method="post">
+    <div class="inputBx">
+    <input type="text" placeholder="User Name" name="username" />
+  </div>
+  <div class="inputBx">
+    <input type="password" placeholder="Password" name="password" />
+  </div>
+    <select id="group" name="group" required>
+        <option value="Client">Client</option>
+        <option value="Lawyer">Lawyer</option>
+        <option value="Clerk">Clerk</option>
+        <option value="Judge">Judge</option>
+    </select>
+    <div class="inputBx">
+    <input type="submit" />
+  </div>
+  <div class="links">
+    <a href="#">Forgot Password</a>
+      <p style="margin-bottom: 0px; color: #fff;">Don`t have account?
+      <a class="nav-link active" aria-current="page" href="{% url "registration" %}">Click Me</a></p>
+    </div>
+  </form>
+    </div>
+</body>
+
+</html>
+
+   
+    
+        

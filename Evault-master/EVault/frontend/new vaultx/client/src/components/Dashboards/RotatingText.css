@@ -1,0 +1,47 @@
+.rotating-text {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: rgb(94, 82, 82);
+    text-align: center;
+    margin-left: 80px;
+  }
+  
+  .rotating-text p {
+    display: inline-block;
+    margin-top:35px;
+    vertical-align: top;
+    position: relative;
+  }
+  
+  .rotating-text .word {
+    position: absolute; 
+    display: inline-flex; 
+    opacity: 0;
+    margin-left: 10px; 
+  }
+  
+  .rotating-text .word .letter {
+    transform-origin: center center 25px;
+  }
+  
+  .rotating-text .word .letter.out {
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+  }
+  
+  .rotating-text .word .letter.in {
+    transition: 0.38s ease;
+  }
+  
+  .rotating-text .word .letter.behind {
+    transform: rotateX(-90deg);
+  }
+  
+  /* Color classes */
+  .alizarin { color: #e74c3c; }
+  .wisteria { color: #8e44ad; }
+  .peter-river { color: #3498db; }
+  .emerald { color: #2ecc71; }
+  .sun-flower { color: #f1c40f; }
+  

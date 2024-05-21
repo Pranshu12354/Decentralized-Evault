@@ -1,0 +1,85 @@
+.modal-content {
+    position: fixed; /* Position the modal content fixed */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the modal content */
+    width: 65%;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8); /* Increased box shadow */
+    background-color: #ffffff;
+    animation: slide-in 0.5s ease-out, fade-in 0.5s forwards;
+    z-index: 9999; 
+  }
+  
+  .overlay {
+    position: fixed; /* Position the overlay fixed */
+    top: 0; /* Occupy the full height of the viewport */
+    left: 0; /* Occupy the full width of the viewport */
+    width: 100%; /* Occupy the full width of the viewport */
+    height: 100%; /* Occupy the full height of the viewport */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+  }
+  
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .ac {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .ac svg {
+    fill: #007bff; /* Blue color for the SVG icon */
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  
+  .upclosebutton {
+    text-align: right;
+  }
+  
+  .upclosebutton button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .upclosebutton button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+  }
+  

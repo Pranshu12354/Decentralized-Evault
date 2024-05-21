@@ -1,0 +1,74 @@
+.top {
+  margin: 40px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.choose {
+  background-color: #5aff15;
+  border-radius: 6px;
+  color: #ffffff;
+  padding: 8px 12px;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.choose:hover {
+  background-color: #00b712;
+}
+
+.textArea {
+  color: #000000;
+  display: inline-block;
+}
+
+.upload {
+  border: none;
+  background-color: #13aa52;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-left: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload:hover {
+  background-color: #a5efc1;
+  padding: 10px 15px;
+}
+
+.upload:disabled,
+.upload[disabled] {
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+}
+
+.form button,
+.form label {
+  transition: transform 0.2s ease;
+}
+
+.form button:focus,
+.form label:focus {
+  outline: none;
+}
+
+.form button:focus {
+  transform: scale(1.05);
+}
+
+.form label:focus {
+  transform: translateY(-2px);
+}
